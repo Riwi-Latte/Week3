@@ -7,6 +7,7 @@ import models.Person;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -14,7 +15,6 @@ public class App {
         Person person1 = new Person("Yeferson", 24);
         Person person2 = new Person("Alejandro", 30);
         Person person3 = new Person("Maikol", 54);
-
 
         System.out.println("Soy " + person1.getName() + " y tengo " + person1.getAge());
         System.out.println("Soy " + person2.getName() + " y tengo " + person2.getAge());
@@ -27,12 +27,11 @@ public class App {
         personList.add(person3);
 
         for (Person person : personList) {
-            if(person.getAge() >= 18){
-                System.out.println(person.getName()+ " es mayor de edad." + "(" + person.getAge() + ")" );
+            if (person.getAge() >= 18) {
+                System.out.println(person.getName() + " es mayor de edad." + "(" + person.getAge() + ")");
             }
         }
 
-        
         System.out.println();
         Agenda myAgenda = new Agenda();
 
@@ -42,7 +41,6 @@ public class App {
         System.out.println();
         myAgenda.buscarContacto("fabio");
 
-
         Dog myDog = new Dog();
         Cat myCat = new Cat();
 
@@ -51,15 +49,42 @@ public class App {
         myCat.makeSound();
         System.out.println();
 
-
         ArrayList<Animals> animals = new ArrayList<>();
         animals.add(new Dog());
         animals.add(new Cat());
         animals.add(new Dog());
-        
+
         for (Animals animal : animals) {
             animal.makeSound();
         }
 
+        HashMap<String, Integer> wordCounter = new HashMap<String, Integer>();
+
+        ArrayList<String> wordList = new ArrayList<String>();
+        wordList.add("java");
+        wordList.add("python");
+        wordList.add("java");
+        wordList.add("javascript");
+        wordList.add("python");
+        wordList.add("java");
+        wordList.add("c++");
+        wordList.add("javascript");
+        wordList.add("python");
+        wordList.add("java");
+
+        for (String word : wordList) {
+            if (wordCounter.containsKey(word)) {
+                int currentCount = wordCounter.get(word);
+                wordCounter.put(word, currentCount + 1);
+            } else {
+                wordCounter.put(word, 1);
+            }
+
+        }
+
+        System.out.println();
+        for (Map.Entry<String, Integer> entry : wordCounter.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue() + " veces");
+        }
     }
 }
