@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class review {
+public class Main {
     public static void main(String[] args) {
 
         Person camilo = new Person("Camilo", 27);
@@ -31,9 +32,41 @@ public class review {
         agenda.addAgenda("Karen", "1234122123");
         agenda.addAgenda("Alexandra", "5434223");
 
+        System.out.println("\n");
         System.out.println("Pedrito");
+        System.out.println("\n");
         System.out.println(agenda.get("Pedrito"));
+        System.out.println("\n");
 
+
+
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+
+        ArrayList<Animal> animals = new ArrayList<>();
+
+        animals.add(dog);
+        animals.add(cat);
+
+        for (int i = 0; i < animals.size(); i++) {
+            animals.get(i).makeSound();
+        }
+
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("python");
+        names.add("python");
+        names.add("java");
+
+        HashMap<String, Integer> count = new HashMap<>();
+
+        for (String name : names) {
+            count.put(name, count.getOrDefault(name, 0) + 1);
+        }
+
+        for (String key : count.keySet()) {
+            System.out.println(key + ": " + count.get(key));
+        }
 
     }
 }
