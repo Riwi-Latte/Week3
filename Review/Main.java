@@ -1,6 +1,9 @@
 package Review;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
 
 public class Main {
     
@@ -37,5 +40,32 @@ public class Main {
             }
             
         }
+
+        //Activity 3
+
+        HashMap<String,String> agenda = new HashMap<>();
+
+        agenda.put("Isabella","300 8311743");
+        agenda.put("Luz","74590234");
+        agenda.put("Brandon","873570423");
+
+        Agenda agenda1 = new Agenda(agenda);
+
+        System.out.println("Ingrese el nombre que desea buscar en la agenda: ");
+        Scanner input = new Scanner(System.in);
+
+        String name = input.nextLine();
+
+        if (agenda1.getHashMap().get(name)== null){
+
+            System.out.println("No se contro en la agenda");
+        }else{
+
+            System.out.println(agenda1.getHashMap().get(name));
+        }
+
+        //Activity 4
+
+        
     }
 }
