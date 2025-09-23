@@ -40,7 +40,7 @@ public class App {
         }
 
 
-        // Activity 2: Abstract Classes
+        // Activity 2: Interface with return value
         ArrayList<Calculable> calculators = new ArrayList<>();
         calculators.add(new Addition());
         calculators.add(new Multiplication());
@@ -104,3 +104,4 @@ public class App {
     }
 
 }
+
