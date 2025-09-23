@@ -66,6 +66,18 @@ public class Main {
 
         //Activity 4
 
+        ArrayList<Animal> animals = new ArrayList<>();
+
+        Gato cat1 = new Gato("Lulu");
+        Perro dog1 = new Perro("Alaska");
+
+        animals.add(dog1);
+        animals.add(cat1);
+
+        for(Animal animal : animals){
+
+            System.out.println(animal.getName()+ ", hace: "+ animal.makeSound());
+        }
         
     }
 }
