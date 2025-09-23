@@ -61,7 +61,7 @@ public class Main {
             System.out.println("No se contro en la agenda");
         }else{
 
-            System.out.println(agenda1.getHashMap().get(name));
+            System.out.println("Nombre: "+ name +", Telefono: "+agenda1.getHashMap().get(name));
         }
 
         //Activity 4
@@ -79,5 +79,33 @@ public class Main {
             System.out.println(animal.getName()+ ", hace: "+ animal.makeSound());
         }
         
+
+        //Activity 5
+
+        HashMap<String, Integer> count = new HashMap<>();
+        ArrayList<String> words = new ArrayList<>();
+
+        do {
+
+            System.out.println("Ingrese una palabra: ");
+            String word = input.nextLine();
+            words.add(word);
+
+            
+        } while (words.size()!= 6);
+
+        for(String word : words){
+
+            if(count.containsKey(word)){
+                count.replace(word, count.get(word)+1);
+            }else{
+                count.put(word, 1);
+            }
+        }
+
+        for(var conutWord: count.entrySet()){
+            System.out.println("Palabra: "+conutWord.getKey() + ", Numero de veces: "+conutWord.getValue());
+        }
+
     }
 }
