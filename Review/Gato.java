@@ -3,7 +3,7 @@ package Review;
 public class Gato extends Animal {
     
     public Gato(String name){
-        this.name = name;
+        setName(name);
     }
 
     public String makeSound(){

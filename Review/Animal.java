@@ -2,7 +2,7 @@ package Review;
 
 public class Animal {
     
-    String name;
+    private String name;
 
     public String makeSound(){
         return "Hacer sonido";
@@ -10,6 +10,10 @@ public class Animal {
 
     public String getName(){
         return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 
 }
