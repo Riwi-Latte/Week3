@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class Agenda {
 
-    HashMap<String,String> agenda = new HashMap<>();
+    HashMap<String,String> agenda; 
 
     public Agenda(HashMap<String,String> agenda){
         this.agenda = agenda;
