@@ -1,4 +1,4 @@
-package models;
+package Day1.models;
 
 public class Person {
     private String name;
@@ -18,8 +18,7 @@ public class Person {
         this.name = name;
     }
 
-
-
+    
     public int getAge(){
         return age;
     }

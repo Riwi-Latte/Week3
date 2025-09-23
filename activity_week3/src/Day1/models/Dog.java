@@ -1,4 +1,4 @@
-package models;
+package Day1.models;
 
 public class Dog extends Animals{
     

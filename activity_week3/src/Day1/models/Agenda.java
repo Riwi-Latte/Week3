@@ -1,4 +1,4 @@
-package models;
+package Day1.models;
 import java.util.HashMap;
 
 public class Agenda {
