@@ -18,5 +18,14 @@ public class Main {
             operable.start();
             operable.stop();
         }
+
+        //Activity 2
+
+        ArrayList<Calculable> calculables = new ArrayList<>();
+
+        calculables.add(new Addition());
+        calculables.add(new Multiplication());
+
+        calculables.forEach((calculable)-> System.out.println(calculable.calculate(3, 4)));
     }
 }
