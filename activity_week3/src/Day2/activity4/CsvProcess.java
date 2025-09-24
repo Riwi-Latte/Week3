@@ -1,5 +1,4 @@
-package models;
-import my_abstract.Process;
+package activity4;
 
 public class CsvProcess extends Process {
 

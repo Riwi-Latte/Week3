@@ -1,6 +1,4 @@
-package models;
-
-import my_interface.Operable;
+package activity1;
 
 public class Engine implements Operable {
     private String type;

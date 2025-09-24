@@ -1,4 +1,4 @@
-package models;
+package activity5;
 
 public class Product {
     private String id;
@@ -29,6 +29,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return id + " - " + name + " - " + String.format("%.2f", price);
+        return id + " - " + name + " - " + String.format("%.3f", price);
     }
 }

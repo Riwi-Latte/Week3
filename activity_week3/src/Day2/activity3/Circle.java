@@ -1,6 +1,4 @@
-package models;
-
-import my_abstract.Shape;
+package activity3;
 
 public class Circle extends Shape {
     private double radius;

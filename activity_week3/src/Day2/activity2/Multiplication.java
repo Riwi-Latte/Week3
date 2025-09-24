@@ -1,5 +1,4 @@
-package models;
-import my_interface.Calculable;
+package activity2;
 
 public class Multiplication implements Calculable {
     @Override

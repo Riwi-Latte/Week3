@@ -1,5 +1,4 @@
-package models;
-import my_abstract.Shape;
+package activity3;
 
 public class Square extends Shape {
     private double side;

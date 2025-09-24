@@ -1,4 +1,4 @@
-package my_interface;
+package activity1;
 
 public interface Operable {
     void start();
