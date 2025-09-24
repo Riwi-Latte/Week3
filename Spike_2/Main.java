@@ -1,6 +1,7 @@
 package Spike_2;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 import Spike_2.Models.CsvProcess;
@@ -70,6 +71,44 @@ public class Main {
         for (Product product : products) {
             
             System.out.println("Id: "+product.getId()+", Nombre: "+product.getName()+", Precio: "+product.getPrice());
+        }
+
+        //Activity 6
+
+        ArrayList<String> words = new ArrayList<>();
+        HashMap<String,Integer> count = new HashMap<>();
+
+
+        words.add("Playa");
+        words.add("Nieve");
+        words.add("Mar");
+        words.add("Arena");
+        words.add("Rio");
+        words.add("Mar");
+        words.add("Nieve");
+        words.add("Montaña");
+        words.add("Playa");
+
+        for (String word : words) {
+            
+            if(count.containsKey(word)){
+                count.replace(word, count.get(word)+1);
+                
+            }else{
+                count.put(word, 1);
+                
+            }
+
+        }
+
+        for (var wordCount : count.entrySet()) {
+            
+            if (wordCount.getValue()>1) {
+                System.out.println("Palabra: "+wordCount.getKey()+"**"+" - Veces: "+wordCount.getValue());
+                
+            }else{
+                System.out.println("Palabra: "+wordCount.getKey()+" - Veces: "+wordCount.getValue());
+            }
         }
 
     }
