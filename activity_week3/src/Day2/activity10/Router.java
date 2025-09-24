@@ -20,7 +20,7 @@ public class Router {
             System.out.println("Manejando solicitud para: " + path);
             action.run();
         } else {
-            System.out.println("Error 404: Ruta '" + path + "' no encontrada.");
+            System.out.println("Error 404: Ruta '" + path + "' no encontrada.\n");
         }
     }
 }
