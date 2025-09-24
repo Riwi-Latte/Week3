@@ -1,9 +1,11 @@
 package Spike_2;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import Spike_2.Models.CsvProcess;
 import Spike_2.Models.JsonProcess;
+import Spike_2.Models.Product;
 
 public class Main {
     
@@ -52,6 +54,23 @@ public class Main {
         json.execute();
 
 
+        //Activity 5
+
+        ArrayList<Product> products = new ArrayList<>();
+        
+        products.add(new Product("asd145","Arroz",5000.0));
+        products.add(new Product("asd149","Frijoles",18000.0));
+        products.add(new Product("asd148","Lentejas",10000.0));
+        products.add(new Product("asd147","Manzana",5000.0));
+        products.add(new Product("asd146","Pera",4000.0));
+
+        products.remove(1);
+        products.get(0).setName("Piña");
+
+        for (Product product : products) {
+            
+            System.out.println("Id: "+product.getId()+", Nombre: "+product.getName()+", Precio: "+product.getPrice());
+        }
 
     }
 }
