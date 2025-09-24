@@ -1,4 +1,4 @@
-package Review;
+package Review.Activity3;
 
 public abstract class Shape {
 

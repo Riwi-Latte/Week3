@@ -1,4 +1,4 @@
-package Review;
+package Review.Activity5;
 
 public class Product {
 

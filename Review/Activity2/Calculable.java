@@ -1,4 +1,4 @@
-package Review;
+package Review.Activity2;
 
 public interface Calculable {
 
