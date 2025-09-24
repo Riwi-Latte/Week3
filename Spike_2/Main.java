@@ -2,6 +2,9 @@ package Spike_2;
 
 import java.util.ArrayList;
 
+import Spike_2.Models.CsvProcess;
+import Spike_2.Models.JsonProcess;
+
 public class Main {
     
     public static void main(String[] args) {
@@ -38,6 +41,16 @@ public class Main {
         shapes.add(new Circle(8.0));
 
         shapes.forEach((shape)-> System.out.println("Forma: "+shape.typeFigure()+", Area: "+ shape.area()));
+
+
+        //Activity 4
+
+        CsvProcess csv = new CsvProcess();
+        JsonProcess json = new JsonProcess();
+
+        csv.execute();
+        json.execute();
+
 
 
     }
