@@ -27,5 +27,18 @@ public class Main {
         calculables.add(new Multiplication());
 
         calculables.forEach((calculable)-> System.out.println(calculable.calculate(3, 4)));
+
+        //Activity 3
+
+        ArrayList<Shape> shapes = new ArrayList<>();
+
+        shapes.add(new Square(5.0));
+        shapes.add(new Circle(13.0));
+        shapes.add(new Square(24.0));
+        shapes.add(new Circle(8.0));
+
+        shapes.forEach((shape)-> System.out.println("Forma: "+shape.typeFigure()+", Area: "+ shape.area()));
+
+
     }
 }
