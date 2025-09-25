@@ -7,6 +7,7 @@ import java.util.Scanner;
 import Spike_2.Models.CsvProcess;
 import Spike_2.Models.JsonProcess;
 import Spike_2.Models.Product;
+import Spike_2.Models.User;
 
 public class Main {
     
@@ -111,5 +112,57 @@ public class Main {
             }
         }
 
+        //Activity 7
+
+        Scanner input = new Scanner(System.in);
+
+        HashMap<String,User> users = new HashMap<>();
+
+        User user1 = new User("I234","Isabella");
+        User user2 = new User("I345","Adrian");
+        User user3 = new User("I456","Laura");
+        User user4 = new User("I567","Luz");
+
+        users.put(user1.Key(), user1);
+        users.put(user2.Key(), user2);
+        users.put(user3.Key(), user3);
+        users.put(user4.Key(), user4);
+
+        System.out.println("Ingrese el id del usuario que quiere buscar");
+        String idShow = input.nextLine();
+
+        if(users.get(idShow)!= null){
+            System.out.println("Id: "+idShow+", Nombre: "+users.get(idShow).getName());
+            
+        }else{
+            System.out.println("El usuario no se encontró");
+        }
+
+        System.out.println("Ingrese el id del usuario que quieres eliminar");
+        String idRemove = input.nextLine();
+
+        if(users.get(idRemove)!= null){
+            users.remove(idRemove);
+            System.out.println("Usuario eliminado!");
+            
+        }else{
+            System.out.println("El usuario no se encontró");
+        }
+
+        System.out.println("Ingrese el id del usuario que quieres actualizar");
+        String idUpdate = input.nextLine();
+
+        if(users.get(idUpdate)!= null){
+            
+            System.out.println("Ingrese el nuevo nombre");
+            String nameUpdate = input.nextLine();
+
+            users.forEach((k,v)-> v.setName(nameUpdate));
+            System.out.println("Usuario actualizado");
+            System.out.println("Id: "+idUpdate+", Nombre: "+users.get(idUpdate).getName());
+            
+        }else{
+            System.out.println("El usuario no se encontró");
+        }
     }
 }
