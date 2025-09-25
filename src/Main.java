@@ -47,10 +47,75 @@ public class Main {
 
     private static void createStudent() {
         try {
-            String id = JOptionPane.showInputDialog("Ingresa el ID del estudiante:");
-            String name = JOptionPane.showInputDialog("Ingresa el nombre del estudiante:");
-            String grade = JOptionPane.showInputDialog("Ingresa el grado del estudiante:");
-            String course = JOptionPane.showInputDialog("Ingresa el curso del estudiante:");
+            String id;
+
+            do {
+                id = JOptionPane.showInputDialog("Ingresa el ID del estudiante:");
+
+                if (id == null)
+                    return;
+                if (id.trim().isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "ERROR: el ID no puede estar vacio",
+                            "ERROR ID", JOptionPane.ERROR_MESSAGE);
+                    continue;
+                }
+                if (repo.findById(id) != null) {
+                    JOptionPane.showMessageDialog(null,
+                            "ERROR: ya  existe un estudiante con el ID: " + id, "ERROR ID",
+                            JOptionPane.ERROR_MESSAGE);
+                    continue;
+                }
+                break;
+            } while (true);
+
+            String name;
+
+            do {
+                name = JOptionPane.showInputDialog("Ingresa el nombre del estudiante:");
+
+                if (name == null)
+                    return;
+                if (!name.trim().isEmpty())
+                    break;
+
+                JOptionPane.showMessageDialog(null,
+                        "ERROR: el nombre del estudiante no puede estar vacio", "ERROR NOMBRE",
+                        JOptionPane.ERROR_MESSAGE);
+            } while (true);
+
+
+            String grade;
+            do {
+                grade = JOptionPane.showInputDialog("Ingresa el grado del estudiante:");
+
+                if (grade == null)
+                    return;
+                if (!grade.trim().isEmpty())
+                    break;
+
+                JOptionPane.showMessageDialog(null,
+                        "ERROR: el grado el estudiante no puede estar vacio", "ERROR GRADO",
+                        JOptionPane.ERROR_MESSAGE);
+
+            } while (true);
+
+
+
+            String course;
+            do {
+                course = JOptionPane.showInputDialog("Ingresa el curso del estudiante:");
+
+                if (course == null)
+                    return;
+                if (!course.trim().isEmpty())
+                    break;
+
+                JOptionPane.showMessageDialog(null,
+                        "ERROR: el curso del estudiante no puede estar vacio", "ERROR CURSO",
+                        JOptionPane.ERROR_MESSAGE);
+
+            } while (true);
+
 
             Student student = new Student(id, name, grade, course);
             repo.save(student);
@@ -59,7 +124,7 @@ public class Main {
                     "Estudiante creado exitosamente!\n" + student.toString());
 
         } catch (IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "ERROR: " + e.getMessage());
         }
     }
 
