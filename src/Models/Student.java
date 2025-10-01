@@ -2,11 +2,11 @@ package src.Models;
 
 import java.util.ArrayList;
 
-public class Student extends Person{
+public class Student extends Person implements Repository {
     
-    String id;
-    String grade;
-    ArrayList<Double> notes;
+    private String id;
+    private String grade;
+    private ArrayList<Double> notes;
 
     public Student(String document, String name, int age, String gender, String id, String grade) {
         super(document, name, age, gender);
